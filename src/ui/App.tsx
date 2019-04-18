@@ -2,6 +2,7 @@ import React from 'react'
 import { Slideshow } from './Slideshow'
 import { ServiceContext, setup } from './services'
 
+import { SlideIntro } from './slides/SlideIntro'
 import { SlideUseState } from './slides/SlideUseState'
 import { SlideUseStateForm } from './slides/SlideUseStateForm'
 import { SlideUseEffect } from './slides/SlideUseEffect'
@@ -17,6 +18,7 @@ const services = setup()
 export const App = () => (
   <ServiceContext.Provider value={services}>
     <Slideshow slides={[
+      SlideIntro,
       SlideUseState,
       SlideUseStateForm,
       SlideUseEffect,
