@@ -9,6 +9,8 @@ import { SlideSubscriptions } from './slides/SlideSubscriptions'
 import { SlideDataFetching } from './slides/SlideDataFetching'
 import { SlideContext } from './slides/SlideContext'
 import { SlideUseRef } from './slides/SlideUseRef'
+import { SlideUseReducer } from './slides/SlideUseReducer'
+import { SlideCustomHooks } from './slides/SlideCustomHooks'
 
 const services = setup()
 
@@ -22,6 +24,8 @@ export const App = () => (
       SlideDataFetching,
       SlideContext,
       SlideUseRef,
+      SlideUseReducer,
+      SlideCustomHooks,
     ]} />
   </ServiceContext.Provider>
 )

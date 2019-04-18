@@ -25,6 +25,7 @@ export function Slideshow ({ slides }: SlideshowProps) {
 
   useEffect(() => {
     storage.setItem('slide', slide)
+
     function onKeyDown (e: KeyboardEvent) {
       if (e.key === 'ArrowLeft' && slide > 0) {
         dispatch({ type: 'PREVIOUS_SLIDE' })
@@ -32,6 +33,7 @@ export function Slideshow ({ slides }: SlideshowProps) {
         dispatch({ type: 'NEXT_SLIDE' })
       }
     }
+
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [slide])
